@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="//cdn.weatherapi.com/weather/64x64/day/113.png"
+    />
+    <title>A's Weather</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="name">A's Weather App</div>
+      <div class="location">
+        <input type="text" id="city" placeholder="City Name" />
+
+        <div class="or">or</div>
+        <input type="number" id="zip" placeholder="Zip Code" />
+        <input type="submit" value="Get Weather" id="submit" />
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="navlinks">
+        <a href="#" class="home">Home</a>
+        <a href="#" class="about">About</a>
+        <a href="#" class="radar">Radar</a>
+        <a href="#" class="storm">Storm Watch</a>
+        <a href="#" class="login">Login</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="current">
+        <div class="starter">
+          Enter a location or zip code to findout the weather!
+        </div>
+
+        <!-- <div class="curlocal">
+          <div class="curleft">
+            <div class="lefttop">
+              <div class="curlocation">Indianapolis, United states</div>
+              <div class="curupdate">2023-08-31 10:00</div>
+            </div>
+
+            <div class="latlon">
+              <div class="lat">Latitude: 39.77</div>
+              <div class="lon">Longitude: -86.16</div>
+            </div>
+          </div>
+
+          <!-- <div class="curregion">Region: Indiana</div> 
+          <div class="curright">
+            <div class="righttop">
+              <div class="curtemp">60.1°F</div>
+              <div class="curfeelslike">Feels like: 60.1°F</div>
+              <div class="condcard">
+                <div class="curcondition">Sunny</div>
+                <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grouptemp">
+          <div class="card">
+            <div class="title">Wind Speed:</div>
+            <div class="curwindspeed">11.9mph</div>
+          </div>
+          <div class="card">
+            <div class="title">Wind Direction:</div>
+            <div class="curwindspeed">SE</div>
+          </div>
+          <div class="card">
+            <div class="title">Precipitation:</div>
+            <div class="curprecip">0in</div>
+          </div>
+          <div class="card">
+            <div class="title">Visibility:</div>
+            <div class="curvisibility">9mi</div>
+          </div>
+          <div class="card">
+            <div class="title">Humidity:</div>
+            <div class="curhumidity">75%</div>
+          </div>
+          <div class="card">
+            <div class="title">UV Index:</div>
+            <div class="curuv">3</div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="container2">
+      <div class="forecast">
+        <!-- <div class="foretitle">Weekly Forecast:</div>
+
+        <div class="days">
+          <div class="daysDate">Date: ${forecast[idx].date}</div>
+          <div class="daysType">
+            <div class="cond">partly cloudy</div>
+
+            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" />
+          </div>
+          <div class="daysHighs">Highs of: 88.9°F</div>
+          <div class="daysLows">Lows of: 71.2°F</div>
+        </div>
+        <div class="days">
+          <div class="daysDate">Date: ${forecast[idx].date}</div>
+          <div class="daysType">
+            <div class="cond">partly cloudy</div>
+
+            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" />
+          </div>
+          <div class="daysHighs">Highs of: 88.9°F</div>
+          <div class="daysLows">Lows of: 71.2°F</div>
+        </div>
+        <div class="days">
+          <div class="daysDate">Date: ${forecast[idx].date}</div>
+          <div class="daysType">
+            <div class="cond">partly cloudy</div>
+
+            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" />
+          </div>
+          <div class="daysHighs">Highs of: 88.9°F</div>
+          <div class="daysLows">Lows of: 71.2°F</div>
+        </div>
+        <div class="days">
+          <div class="daysDate">Date: ${forecast[idx].date}</div>
+          <div class="daysType">
+            <div class="cond">partly cloudy</div>
+
+            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" />
+          </div>
+          <div class="daysHighs">Highs of: 88.9°F</div>
+          <div class="daysLows">Lows of: 71.2°F</div>
+        </div> -->
+      </div>
+    </div>
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="app/hamburger.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>

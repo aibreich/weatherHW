@@ -1,0 +1,478 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+   height: 470px;
+    background-image:  linear-gradient(
+        to right,
+        rgba(108, 108, 108, 0.5),
+        rgba(108, 108, 108, 0.5)
+      ), url(img/clouds.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+         
+  .current { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%; 
+    height: 350px; 
+
+    .starter {
+        width: 380px;
+        font-size: 27px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+
+    .curlocal { 
+        width: 830px;
+        height: 250px;   
+        background-color: lightslategray;
+        border-radius: 15px;
+        display: flex;  
+        align-items: center;
+        justify-content: space-evenly;
+        box-shadow: 2px 2px 3px 0px rgb(33, 33, 33);
+        
+
+        .curleft {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            // background-color: lightblue;
+
+            .lefttop {
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                justify-content: space-evenly;
+                height: 50%; 
+                
+                .curlocation {
+                font-size: 25px;
+                height: 35px;
+            }
+            .curupdate{
+                font-size: 14px;
+                height: 25px;
+            }
+            }
+            
+             
+            .latlon{
+                height: 30%; 
+                width: 200px;
+                display: flex;
+                flex-direction: column; 
+                // align-items: center;
+                justify-content: space-evenly;
+                
+                .lat{
+                    display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                }
+                .lon{
+                    display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                }
+            }
+        }
+        .curright {
+            height: 90%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+ 
+            .righttop {
+                height: 100%;
+                width: 50%;  
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // justify-content: space-evenly;
+
+                .curtemp{
+                    // height: 50%;
+                    height: 60px; 
+                    width: 100%; 
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    font-size: 30px;
+                } 
+                .curfeelslike{
+                    // height: 50%;
+                    height: 20px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    
+                }
+                .condcard {
+                    margin-top: 10px;  
+                    width: 300px;
+                    height: 110px;   
+                    display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: white;
+                border-radius: 15px;
+                box-shadow: 2px 2px 3px 0px rgb(33, 33, 33);
+                img {
+                width: 115px;
+                height: 115px;  
+                
+                
+                } 
+            .curcondition{
+                font-size: 18px;
+                width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                
+                
+                
+                
+            }
+                } 
+            }
+            // .rightbottom {
+            //     height: 75%;
+            //     width: 40%; 
+            //     display: flex;
+            //     flex-direction: column;
+            //     align-items: center;
+            //     justify-content: space-evenly;
+            //     background-color: white;
+            //     border-radius: 15px;
+            //     img {
+            //     width: 115px;
+            //     height: 115px;  
+            //     } 
+            // .curcondition{
+            //     font-size: 18px;
+                
+                
+            // }
+            // }
+            
+        }
+    }
+
+    .grouptemp{
+        width: 860px;
+        height: 180px;
+        // background-color: green;
+        display: grid;
+        grid-template-columns: repeat(6,auto); 
+        align-items: center;
+        justify-content: space-evenly; 
+
+        
+        .card {
+            width: 125px;
+            height: 125px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15%;
+            box-shadow: 2px 2px 3px 0px rgb(33, 33, 33);
+            
+
+            .title {
+                font-size: 14px;
+                color: grey; 
+                height: 40px;
+                width: 110px;
+                display: flex;
+                align-items: center; 
+                justify-content: space-evenly;
+                
+                
+            }
+
+            .curwindspeed{
+                width: 125px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-size: 20px; 
+                
+            }
+            .curwindspeed{
+                width: 125px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-size: 20px; 
+            }
+            .curprecip{
+                width: 125px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-size: 20px; 
+            }
+            .curvisibility{
+                width: 125px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-size: 20px; 
+            }
+            .curhumidity{
+                width: 125px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-size: 20px; 
+            }
+            .curuv{
+                width: 125px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-size: 20px;  
+            }
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+    .container {
+        .current {
+            .curlocal {
+                width: 680px;
+
+                .curleft {
+
+                }
+                .curright {
+                    .righttop {
+                        .curtemp {
+
+                        }
+                        .curfeelslike {
+
+                        }
+                        .condcard {
+                            width: 250px;
+                            .curcondition {
+
+                            }
+                            img {
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+            .grouptemp {
+                width: 710px;
+                .card {
+                    width: 100px;
+                    height: 100px;
+                    .title {
+                        width: 100px; 
+                    } 
+                    .curwindspeed{
+                        width: 100px;
+                    }
+                    .curprecip {
+                        width: 100px;
+                    }
+                    .curvisibility {
+                        width: 100px;
+                    }
+                    .curhumidity {
+                        width: 100px;
+                    }
+                    .curuv {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+
+    .container {
+        height: 650px;
+        .current {
+            height: 610px;
+            .curlocal {
+                height: 340px;
+                width: 380px; 
+                flex-direction: column;
+  
+                .curleft {
+                    height: 120px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center; 
+
+                    .latlon{
+                        height: 60px; 
+                        width: 300px;
+                        flex-direction: row;
+                        
+                        .lat{
+                           
+                        }
+                        .lon{
+                            
+                        }
+                    }
+                }
+                .curright {
+                    height: 50%;
+                    width: 90%;
+                    display: flex; 
+                    align-items: center;
+                    justify-content: space-evenly;
+                    .righttop {
+                        .curtemp {
+
+                        }
+                        .curfeelslike {
+
+                        }
+                        .condcard {
+                            width: 250px;
+                            .curcondition {
+
+                            }
+                            img {
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+            .grouptemp {
+                width: 460px;
+                height: 240px;
+                grid-template-columns: repeat(3, auto);
+                .card {
+                    width: 100px;
+                    height: 100px;
+                    .title {
+                        width: 100px; 
+                    } 
+                    .curwindspeed{
+                        width: 100px;
+                    }
+                    .curprecip {
+                        width: 100px;
+                    }
+                    .curvisibility {
+                        width: 100px;
+                    }
+                    .curhumidity {
+                        width: 100px;
+                    }
+                    .curuv {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+
+    .container {
+        .current {
+            .starter {
+                margin-top: 20px;
+                
+            }
+            .curlocal {
+  
+                .curleft {
+
+                    .latlon{
+                        
+                        .lat{
+                           
+                        }
+                        .lon{
+                            
+                        }
+                    }
+                }
+                .curright {
+                    .righttop {
+                        .curtemp {
+
+                        }
+                        .curfeelslike {
+
+                        }
+                        .condcard {
+                            width: 250px;
+                            .curcondition {
+
+                            }
+                            img {
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+            .grouptemp {
+                width: 380px;
+                height: 240px;
+                grid-template-columns: repeat(3, auto);
+                .card {
+                    width: 100px;
+                    height: 100px;
+                    .title {
+                        width: 100px; 
+                    } 
+                    .curwindspeed{
+                        width: 100px;
+                    }
+                    .curprecip {
+                        width: 100px;
+                    }
+                    .curvisibility {
+                        width: 100px;
+                    }
+                    .curhumidity {
+                        width: 100px;
+                    }
+                    .curuv {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

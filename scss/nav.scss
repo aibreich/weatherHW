@@ -1,0 +1,194 @@
+
+// nav styling 
+nav {
+    height: 61px;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative; 
+     
+    // website name tag
+    .name {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 28px; 
+        width: 220px;
+        text-align: center;
+    }
+    // input tags for city & zip 
+    .location {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        height: 20px;
+        width: 375px;
+        
+        #city{
+            width: 100px;
+            height: 25px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 3px 0px rgb(33, 33, 33);
+        }
+        .or {
+            height: 20px;
+            width: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+        #zip{
+            width: 100px;
+            height: 25px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 3px 0px rgb(33, 33, 33);
+        }
+        #submit{
+            background-color: orange;
+            width: 125px;
+            height: 25px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px 0px rgb(33, 33, 33);
+        }
+    }
+    // navlinks
+    .navlinks{
+        display: none;
+      }
+    //   navlinks when active
+      .navlinks.active {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 400px;
+        background-color: lightblue;
+        padding-top: 60px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(150%);
+        animation: slideanim .4s ease-in-out forwards;
+     
+           a{
+            color: black;
+            text-decoration: none;
+            width: 400px;
+            height: 19.9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 18px;
+            text-transform: uppercase;
+            
+        }
+        .home {
+            background-color: lightblue;
+            box-shadow: 0px 1px 6px 0px rgb(33, 33, 33);
+            margin-top: .5px;
+        }
+        .about{
+            background-color: lightblue;
+            box-shadow: 0px 1px 6px 0px rgb(33, 33, 33);
+        }
+        .radar{
+            background-color: lightblue;
+            box-shadow: 0px 1px 6px 0px rgb(33, 33, 33);
+        }
+        .storm{
+            background-color: lightblue;
+            box-shadow: 0px 1px 6px 0px rgb(33, 33, 33);
+        }
+        .login {  
+            background-color: orange;
+            box-shadow: 0px 1px 6px 0px rgb(33, 33, 33);
+        }
+    }
+    // slide animation
+        @keyframes slideanim {
+            100% {
+              transform: translate(0);
+            }
+          }
+    //   hamburger menu
+      .hamburger {
+        display: block;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;  
+
+        // bars for the hamburger menu
+        .bar {
+        display: block;
+        width: 30px;
+        height: 3.5px;
+        border-radius: 10px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+      }
+      }
+    //   on hover change pointer 
+      .hamburger:hover{
+        cursor: pointer;
+      }
+    //   changing hamburger menu to "x"
+    // needed this extra hamburger style to make the x work for somereason
+        .hamburger {
+          display: block;
+          cursor: pointer;
+        }
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+      
+        .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+      
+        .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+} 
+
+@media screen and (max-width: 720px) {
+    nav {
+        height: 160px;
+        .name {
+            width: 66px;
+            margin-left: 20px;
+            text-align: left;
+        }
+    
+        .location {
+            flex-direction: column;
+            height: 120px;
+            width: 90px;
+            
+            #city{
+
+            }
+            #zip{
+
+            }
+            #submit{
+                margin-top: 10px;
+                height: 35px;
+            }  
+            
+        }
+    }
+}

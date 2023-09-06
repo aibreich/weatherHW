@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px; }
+
+input {
+  display: block; }
+
+nav {
+  height: 61px;
+  width: 100%;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative; }
+  nav .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 28px;
+    width: 220px;
+    text-align: center; }
+  nav .location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 20px;
+    width: 375px; }
+    nav .location #city {
+      width: 100px;
+      height: 25px;
+      border-radius: 4px;
+      box-shadow: 1px 1px 3px 0px #212121; }
+    nav .location .or {
+      height: 20px;
+      width: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly; }
+    nav .location #zip {
+      width: 100px;
+      height: 25px;
+      border-radius: 4px;
+      box-shadow: 1px 1px 3px 0px #212121; }
+    nav .location #submit {
+      background-color: orange;
+      width: 125px;
+      height: 25px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 3px 0px #212121; }
+  nav .navlinks {
+    display: none; }
+  nav .navlinks.active {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 400px;
+    background-color: lightblue;
+    padding-top: 60px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(150%);
+    animation: slideanim .4s ease-in-out forwards; }
+    nav .navlinks.active a {
+      color: black;
+      text-decoration: none;
+      width: 400px;
+      height: 19.9%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 18px;
+      text-transform: uppercase; }
+    nav .navlinks.active .home {
+      background-color: lightblue;
+      box-shadow: 0px 1px 6px 0px #212121;
+      margin-top: .5px; }
+    nav .navlinks.active .about {
+      background-color: lightblue;
+      box-shadow: 0px 1px 6px 0px #212121; }
+    nav .navlinks.active .radar {
+      background-color: lightblue;
+      box-shadow: 0px 1px 6px 0px #212121; }
+    nav .navlinks.active .storm {
+      background-color: lightblue;
+      box-shadow: 0px 1px 6px 0px #212121; }
+    nav .navlinks.active .login {
+      background-color: orange;
+      box-shadow: 0px 1px 6px 0px #212121; }
+
+@keyframes slideanim {
+  100% {
+    transform: translate(0); } }
+  nav .hamburger {
+    display: block;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px; }
+    nav .hamburger .bar {
+      display: block;
+      width: 30px;
+      height: 3.5px;
+      border-radius: 10px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: white; }
+  nav .hamburger:hover {
+    cursor: pointer; }
+  nav .hamburger {
+    display: block;
+    cursor: pointer; }
+  nav .hamburger.active .bar:nth-child(2) {
+    opacity: 0; }
+  nav .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); }
+  nav .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); }
+
+@media screen and (max-width: 720px) {
+  nav {
+    height: 160px; }
+    nav .name {
+      width: 66px;
+      margin-left: 20px;
+      text-align: left; }
+    nav .location {
+      flex-direction: column;
+      height: 120px;
+      width: 90px; }
+      nav .location #submit {
+        margin-top: 10px;
+        height: 35px; } }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 470px;
+  background-image: linear-gradient(to right, rgba(108, 108, 108, 0.5), rgba(108, 108, 108, 0.5)), url(img/clouds.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .container .current {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 350px; }
+    .container .current .starter {
+      width: 380px;
+      font-size: 27px;
+      text-align: center;
+      font-weight: bold;
+      color: white; }
+    .container .current .curlocal {
+      width: 830px;
+      height: 250px;
+      background-color: lightslategray;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      box-shadow: 2px 2px 3px 0px #212121; }
+      .container .current .curlocal .curleft {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .container .current .curlocal .curleft .lefttop {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 50%; }
+          .container .current .curlocal .curleft .lefttop .curlocation {
+            font-size: 25px;
+            height: 35px; }
+          .container .current .curlocal .curleft .lefttop .curupdate {
+            font-size: 14px;
+            height: 25px; }
+        .container .current .curlocal .curleft .latlon {
+          height: 30%;
+          width: 200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly; }
+          .container .current .curlocal .curleft .latlon .lat {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly; }
+          .container .current .curlocal .curleft .latlon .lon {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly; }
+      .container .current .curlocal .curright {
+        height: 90%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; }
+        .container .current .curlocal .curright .righttop {
+          height: 100%;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .container .current .curlocal .curright .righttop .curtemp {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 30px; }
+          .container .current .curlocal .curright .righttop .curfeelslike {
+            height: 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly; }
+          .container .current .curlocal .curright .righttop .condcard {
+            margin-top: 10px;
+            width: 300px;
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 2px 2px 3px 0px #212121; }
+            .container .current .curlocal .curright .righttop .condcard img {
+              width: 115px;
+              height: 115px; }
+            .container .current .curlocal .curright .righttop .condcard .curcondition {
+              font-size: 18px;
+              width: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly; }
+    .container .current .grouptemp {
+      width: 860px;
+      height: 180px;
+      display: grid;
+      grid-template-columns: repeat(6, auto);
+      align-items: center;
+      justify-content: space-evenly; }
+      .container .current .grouptemp .card {
+        width: 125px;
+        height: 125px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15%;
+        box-shadow: 2px 2px 3px 0px #212121; }
+        .container .current .grouptemp .card .title {
+          font-size: 14px;
+          color: grey;
+          height: 40px;
+          width: 110px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly; }
+        .container .current .grouptemp .card .curwindspeed {
+          width: 125px;
+          height: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-size: 20px; }
+        .container .current .grouptemp .card .curwindspeed {
+          width: 125px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-size: 20px; }
+        .container .current .grouptemp .card .curprecip {
+          width: 125px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-size: 20px; }
+        .container .current .grouptemp .card .curvisibility {
+          width: 125px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-size: 20px; }
+        .container .current .grouptemp .card .curhumidity {
+          width: 125px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-size: 20px; }
+        .container .current .grouptemp .card .curuv {
+          width: 125px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-size: 20px; }
+
+@media screen and (max-width: 900px) {
+  .container .current .curlocal {
+    width: 680px; }
+    .container .current .curlocal .curright .righttop .condcard {
+      width: 250px; }
+      .container .current .curlocal .curright .righttop .condcard img {
+        width: 100px;
+        height: 100px; }
+  .container .current .grouptemp {
+    width: 710px; }
+    .container .current .grouptemp .card {
+      width: 100px;
+      height: 100px; }
+      .container .current .grouptemp .card .title {
+        width: 100px; }
+      .container .current .grouptemp .card .curwindspeed {
+        width: 100px; }
+      .container .current .grouptemp .card .curprecip {
+        width: 100px; }
+      .container .current .grouptemp .card .curvisibility {
+        width: 100px; }
+      .container .current .grouptemp .card .curhumidity {
+        width: 100px; }
+      .container .current .grouptemp .card .curuv {
+        width: 100px; } }
+
+@media screen and (max-width: 720px) {
+  .container {
+    height: 650px; }
+    .container .current {
+      height: 610px; }
+      .container .current .curlocal {
+        height: 340px;
+        width: 380px;
+        flex-direction: column; }
+        .container .current .curlocal .curleft {
+          height: 120px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .container .current .curlocal .curleft .latlon {
+            height: 60px;
+            width: 300px;
+            flex-direction: row; }
+        .container .current .curlocal .curright {
+          height: 50%;
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly; }
+          .container .current .curlocal .curright .righttop .condcard {
+            width: 250px; }
+            .container .current .curlocal .curright .righttop .condcard img {
+              width: 100px;
+              height: 100px; }
+      .container .current .grouptemp {
+        width: 460px;
+        height: 240px;
+        grid-template-columns: repeat(3, auto); }
+        .container .current .grouptemp .card {
+          width: 100px;
+          height: 100px; }
+          .container .current .grouptemp .card .title {
+            width: 100px; }
+          .container .current .grouptemp .card .curwindspeed {
+            width: 100px; }
+          .container .current .grouptemp .card .curprecip {
+            width: 100px; }
+          .container .current .grouptemp .card .curvisibility {
+            width: 100px; }
+          .container .current .grouptemp .card .curhumidity {
+            width: 100px; }
+          .container .current .grouptemp .card .curuv {
+            width: 100px; } }
+
+@media screen and (max-width: 520px) {
+  .container .current .starter {
+    margin-top: 20px; }
+  .container .current .curlocal .curright .righttop .condcard {
+    width: 250px; }
+    .container .current .curlocal .curright .righttop .condcard img {
+      width: 100px;
+      height: 100px; }
+  .container .current .grouptemp {
+    width: 380px;
+    height: 240px;
+    grid-template-columns: repeat(3, auto); }
+    .container .current .grouptemp .card {
+      width: 100px;
+      height: 100px; }
+      .container .current .grouptemp .card .title {
+        width: 100px; }
+      .container .current .grouptemp .card .curwindspeed {
+        width: 100px; }
+      .container .current .grouptemp .card .curprecip {
+        width: 100px; }
+      .container .current .grouptemp .card .curvisibility {
+        width: 100px; }
+      .container .current .grouptemp .card .curhumidity {
+        width: 100px; }
+      .container .current .grouptemp .card .curuv {
+        width: 100px; } }
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: lightslategrey;
+  box-shadow: inset 0px 2px 12px 0px #212121; }
+  .container2 .forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 920px;
+    height: 500px; }
+    .container2 .forecast .foretitle {
+      font-size: 22px;
+      margin-top: 25px;
+      color: white; }
+    .container2 .forecast .days {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 830px;
+      height: 60px;
+      background-color: lightgrey;
+      border-radius: 15px;
+      margin-top: 12px;
+      box-shadow: 2px 2px 3px 0px #212121; }
+      .container2 .forecast .days .daysDate {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; }
+      .container2 .forecast .days .daysHighs {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; }
+      .container2 .forecast .days .daysLows {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; }
+      .container2 .forecast .days .daysType {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; }
+
+@media screen and (max-width: 900px) {
+  .container2 .forecast .days {
+    width: 680px; }
+    .container2 .forecast .days .daysDate {
+      width: 150px; }
+    .container2 .forecast .days .daysHighs {
+      width: 150px; }
+    .container2 .forecast .days .daysLows {
+      width: 150px; }
+    .container2 .forecast .days .daysType {
+      width: 150px; } }
+
+@media screen and (max-width: 720px) {
+  .container2 {
+    height: 570px; }
+    .container2 .forecast {
+      width: 540px; }
+      .container2 .forecast .days {
+        width: 380px;
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(2, auto); }
+        .container2 .forecast .days .daysDate {
+          width: 150px; }
+        .container2 .forecast .days .daysHighs {
+          width: 150px; }
+        .container2 .forecast .days .daysLows {
+          width: 150px; }
+        .container2 .forecast .days .daysType {
+          width: 150px; } }
+
+@media screen and (max-width: 480px) {
+  .container2 {
+    height: 670px; }
+    .container2 .forecast {
+      width: 440px; }
+      .container2 .forecast .days {
+        width: 380px;
+        height: 125px;
+        display: grid;
+        grid-template-columns: repeat(2, auto); }
+        .container2 .forecast .days .daysDate {
+          width: 150px; }
+        .container2 .forecast .days .daysHighs {
+          width: 150px; }
+        .container2 .forecast .days .daysLows {
+          width: 150px; }
+        .container2 .forecast .days .daysType {
+          width: 150px; } }

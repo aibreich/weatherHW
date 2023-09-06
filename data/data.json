@@ -1,0 +1,49 @@
+{
+  "Students": [
+    {
+      "firstName": "Aiden",
+      "lastName": "Eichenour",
+      "address": "1234 w road",
+      "phone": "888-555-4444",
+      "email": "a@a.com",
+      "classes": [
+        {
+          "classNumber": "222"
+        },
+        {
+          "classNumber": "333"
+        }
+      ]
+    },
+    {
+      "firstName": "Marielle",
+      "lastName": "Harrell",
+      "address": "1414 w road",
+      "phone": "888-554-2244",
+      "email": "m@m.com",
+      "classes": [
+        {
+          "classNumber": "222"
+        },
+        {
+          "classNumber": "333"
+        }
+      ]
+    },
+    {
+      "firstName": "Jacob",
+      "lastName": "Catalan",
+      "address": "1434 w road",
+      "phone": "888-545-4342",
+      "email": "j@c.com",
+      "classes": [
+        {
+          "classNumber": "522"
+        },
+        {
+          "classNumber": "433"
+        }
+      ]
+    }
+  ]
+}

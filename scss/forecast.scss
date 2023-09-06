@@ -1,0 +1,160 @@
+.container2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightslategrey;
+    box-shadow: inset 0px 2px 12px 0px rgb(33, 33, 33);   
+      
+    .forecast {  
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 920px;
+        
+        height: 500px;  
+        
+        .foretitle {
+            font-size: 22px;
+            margin-top: 25px;
+            color: white;
+        }
+        .days {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 830px;  
+            height: 60px; 
+            background-color: lightgrey;  
+            border-radius: 15px;
+            margin-top: 12px; 
+            box-shadow: 2px 2px 3px 0px rgb(33, 33, 33);
+            
+
+            .daysDate{
+                width: 200px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                
+            }
+            .daysHighs{
+                width: 200px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                
+
+            }
+            .daysLows{
+                width: 200px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                
+            }
+            .daysType{
+                width: 200px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                
+            }
+          }
+          }
+
+}  
+
+@media screen and (max-width: 900px) {
+    .container2 {
+        
+        .forecast {
+
+           .foretitle{
+            
+        } 
+        .days {
+            width: 680px;
+            .daysDate {
+                width: 150px;
+            }
+            .daysHighs {
+                width: 150px;
+            }
+            .daysLows {
+                width: 150px;
+            }
+            .daysType {
+                width: 150px;  
+            }
+        }
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+    .container2 {
+        height: 570px;
+        .forecast {
+            width: 540px;
+           .foretitle{
+                
+            } 
+        .days { 
+                width: 380px;
+                height: 200px; 
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                
+                    .daysDate {
+                        width: 150px;
+                    }  
+                    .daysHighs {
+                        width: 150px;
+                    }
+                    .daysLows {
+                        width: 150px;
+                    }
+                    .daysType {
+                        width: 150px;  
+                    }
+                }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .container2 {
+        height: 670px;
+        .forecast { 
+            width: 440px;
+           .foretitle{
+                
+            } 
+        .days {  
+                width: 380px;
+                height: 125px;  
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                
+                    .daysDate {
+                        width: 150px;
+                    }  
+                    .daysHighs {
+                        width: 150px;
+                    }
+                    .daysLows {
+                        width: 150px;
+                    }
+                    .daysType {
+                        width: 150px;  
+                    }
+                }
+        }
+    }
+}
