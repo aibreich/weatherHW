@@ -34,20 +34,9 @@ nav {
     justify-content: space-between;
     margin: 0 auto;
     height: 20px;
-    width: 375px; }
+    width: 275px; }
     nav .location #city {
-      width: 100px;
-      height: 25px;
-      border-radius: 4px;
-      box-shadow: 1px 1px 3px 0px #212121; }
-    nav .location .or {
-      height: 20px;
-      width: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly; }
-    nav .location #zip {
-      width: 100px;
+      width: 240px;
       height: 25px;
       border-radius: 4px;
       box-shadow: 1px 1px 3px 0px #212121; }
@@ -55,7 +44,7 @@ nav {
       background-color: orange;
       width: 125px;
       height: 25px;
-      border-radius: 10px;
+      border-radius: 4px;
       box-shadow: 1px 1px 3px 0px #212121; }
   nav .navlinks {
     display: none; }
@@ -138,18 +127,14 @@ nav {
 
 @media screen and (max-width: 720px) {
   nav {
-    height: 160px; }
+    height: 140px; }
     nav .name {
       width: 66px;
       margin-left: 20px;
       text-align: left; }
-    nav .location {
-      flex-direction: column;
-      height: 120px;
-      width: 90px; }
-      nav .location #submit {
-        margin-top: 10px;
-        height: 35px; } }
+    nav .location #submit {
+      margin-top: 10px;
+      height: 35px; } }
 
 .container {
   display: flex;

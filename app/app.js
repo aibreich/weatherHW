@@ -39,7 +39,7 @@ function initListeners() {
           `<div class="curlocal">
           <div class="curleft">
             <div class="lefttop">
-              <div class="curlocation">${data.location.name}, ${data.location.country}</div>
+              <div class="curlocation">${data.location.name}, ${data.location.region}</div>
               <div class="curupdate">${data.current.last_updated}</div>
             </div>
             <div class="latlon">
