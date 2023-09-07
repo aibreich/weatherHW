@@ -236,7 +236,7 @@ function initListeners() {
   });
   const options = {
     enableHighAccuracy: true,
-    timeout: 2000,
+    timeout: 5000,
     maximumAge: 0,
   };
 
