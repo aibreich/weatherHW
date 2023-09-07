@@ -32,7 +32,7 @@
     .curlocal { 
         width: 830px;
         height: 250px;   
-        background-color: lightslategray;
+        background-color: rgb(152, 174, 196);
         border-radius: 15px;
         display: flex;  
         align-items: center;
@@ -53,7 +53,8 @@
                 flex-direction: column;
                 // align-items: center;
                 justify-content: space-evenly;
-                height: 50%; 
+                height: 50%;
+                width: 210px; 
                 
                 .curlocation {
                 font-size: 25px;
@@ -68,21 +69,19 @@
              
             .latlon{
                 height: 30%; 
-                width: 200px;
+                width: 210px;
                 display: flex;
                 flex-direction: column; 
-                // align-items: center;
+                // align-items: center; 
                 justify-content: space-evenly;
                 
                 .lat{
-                    display: flex;
-                align-items: center;
-                justify-content: space-evenly;
+                text-align: left;
+                width: 210px;
                 }
                 .lon{
-                    display: flex;
-                align-items: center;
-                justify-content: space-evenly;
+                text-align: left;
+                width: 210px;
                 }
             }
         }

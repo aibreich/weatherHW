@@ -1,0 +1,143 @@
+.forecastainer {
+    width: 100vw;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightsteelblue;
+    box-shadow: inset 0px 2px 12px 0px rgb(33, 33, 33);  
+    .dailyforecast {
+        // width: 130px;
+        // height: 25px;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 10px;
+        // color: white;
+    }
+
+    .dayforecast{
+        width: 830px;
+        height: 180px;
+        display: flex; 
+        margin-top: 10px;
+        overflow: auto;
+  white-space: nowrap;
+
+        .daycast{
+            display: inline-block;
+            .daycard {
+                margin-right: 8px;
+                width: 85px;
+                height: 160px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                border-radius: 10px;
+                box-shadow: 2px 2px 3px 0px rgb(33, 33, 33); 
+
+                .dayimg {
+                    width: 64px;
+                    height: 64px;
+                }
+                .daytemp{
+                    font-size: 20px;
+                    width: 64px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    
+                }
+                .daytime{
+                    font-size: 16px;
+                    width: 64px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    
+                }
+                
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 900px) {
+    .forecastainer {
+    
+        .dayforecast{
+            width: 680px;
+    
+            .daycast{
+                display: inline-block;
+                .daycard { 
+    
+                    .dayimg {
+                    }
+                    .daytemp{
+                        
+                    }
+                    .daytime{
+                        
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+    .forecastainer {
+    
+        .dayforecast{
+            width: 380px;
+    
+            .daycast{
+                display: inline-block;
+                .daycard { 
+    
+                    .dayimg {
+                    }
+                    .daytemp{
+                        
+                    }
+                    .daytime{
+                        
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+// @media screen and (max-width: 480px) {
+//     .forecastainer {
+    
+//         .dayforecast{
+//             width: 380px;
+    
+//             .daycast{
+//                 display: inline-block;
+//                 .daycard { 
+    
+//                     .dayimg {
+//                     }
+//                     .daytemp{
+                        
+//                     }
+//                     .daytime{
+                        
+//                     }
+                    
+//                 }
+//             }
+            
+//         }
+//     }
+// }

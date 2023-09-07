@@ -16,11 +16,12 @@ input {
 nav {
   height: 61px;
   width: 100%;
-  background-color: lightblue;
+  background-color: lightsteelblue;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  position: relative; }
+  position: relative;
+  box-shadow: 0px 2px 12px 0px #212121; }
   nav .name {
     display: flex;
     align-items: center;
@@ -36,7 +37,7 @@ nav {
     height: 20px;
     width: 275px; }
     nav .location #city {
-      width: 240px;
+      width: 200px;
       height: 25px;
       border-radius: 4px;
       box-shadow: 1px 1px 3px 0px #212121; }
@@ -54,7 +55,7 @@ nav {
     top: 0;
     height: 100vh;
     width: 400px;
-    background-color: lightblue;
+    background-color: lightsteelblue;
     padding-top: 60px;
     z-index: 2;
     display: flex;
@@ -75,17 +76,17 @@ nav {
       font-size: 18px;
       text-transform: uppercase; }
     nav .navlinks.active .home {
-      background-color: lightblue;
+      background-color: lightsteelblue;
       box-shadow: 0px 1px 6px 0px #212121;
       margin-top: .5px; }
     nav .navlinks.active .about {
-      background-color: lightblue;
+      background-color: lightsteelblue;
       box-shadow: 0px 1px 6px 0px #212121; }
     nav .navlinks.active .radar {
-      background-color: lightblue;
+      background-color: lightsteelblue;
       box-shadow: 0px 1px 6px 0px #212121; }
     nav .navlinks.active .storm {
-      background-color: lightblue;
+      background-color: lightsteelblue;
       box-shadow: 0px 1px 6px 0px #212121; }
     nav .navlinks.active .login {
       background-color: orange;
@@ -131,10 +132,23 @@ nav {
     nav .name {
       width: 66px;
       margin-left: 20px;
+      text-align: left; } }
+
+@media screen and (max-width: 650px) {
+  nav {
+    height: 140px; }
+    nav .name {
+      width: 66px;
+      margin-left: 20px;
       text-align: left; }
-    nav .location #submit {
-      margin-top: 10px;
-      height: 35px; } }
+    nav .location {
+      flex-direction: column;
+      height: 50px;
+      margin-left: 0px; }
+      nav .location #submit {
+        margin-top: 10px;
+        height: 35px;
+        width: 150px; } }
 
 .container {
   display: flex;
@@ -162,7 +176,7 @@ nav {
     .container .current .curlocal {
       width: 830px;
       height: 250px;
-      background-color: lightslategray;
+      background-color: #98aec4;
       border-radius: 15px;
       display: flex;
       align-items: center;
@@ -178,7 +192,8 @@ nav {
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
-          height: 50%; }
+          height: 50%;
+          width: 210px; }
           .container .current .curlocal .curleft .lefttop .curlocation {
             font-size: 25px;
             height: 35px; }
@@ -187,18 +202,16 @@ nav {
             height: 25px; }
         .container .current .curlocal .curleft .latlon {
           height: 30%;
-          width: 200px;
+          width: 210px;
           display: flex;
           flex-direction: column;
           justify-content: space-evenly; }
           .container .current .curlocal .curleft .latlon .lat {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly; }
+            text-align: left;
+            width: 210px; }
           .container .current .curlocal .curleft .latlon .lon {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly; }
+            text-align: left;
+            width: 210px; }
       .container .current .curlocal .curright {
         height: 90%;
         width: 50%;
@@ -413,6 +426,69 @@ nav {
       .container .current .grouptemp .card .curuv {
         width: 100px; } }
 
+.forecastainer {
+  width: 100vw;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: lightsteelblue;
+  box-shadow: inset 0px 2px 12px 0px #212121; }
+  .forecastainer .dailyforecast {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px; }
+  .forecastainer .dayforecast {
+    width: 830px;
+    height: 180px;
+    display: flex;
+    margin-top: 10px;
+    overflow: auto;
+    white-space: nowrap; }
+    .forecastainer .dayforecast .daycast {
+      display: inline-block; }
+      .forecastainer .dayforecast .daycast .daycard {
+        margin-right: 8px;
+        width: 85px;
+        height: 160px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px 0px #212121; }
+        .forecastainer .dayforecast .daycast .daycard .dayimg {
+          width: 64px;
+          height: 64px; }
+        .forecastainer .dayforecast .daycast .daycard .daytemp {
+          font-size: 20px;
+          width: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly; }
+        .forecastainer .dayforecast .daycast .daycard .daytime {
+          font-size: 16px;
+          width: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly; }
+
+@media screen and (max-width: 900px) {
+  .forecastainer .dayforecast {
+    width: 680px; }
+    .forecastainer .dayforecast .daycast {
+      display: inline-block; } }
+
+@media screen and (max-width: 720px) {
+  .forecastainer .dayforecast {
+    width: 380px; }
+    .forecastainer .dayforecast .daycast {
+      display: inline-block; } }
+
 .container2 {
   display: flex;
   flex-direction: column;
@@ -420,7 +496,7 @@ nav {
   height: 400px;
   align-items: center;
   justify-content: space-evenly;
-  background-color: lightslategrey;
+  background-color: #98aec4;
   box-shadow: inset 0px 2px 12px 0px #212121; }
   .container2 .forecast {
     display: flex;
@@ -431,8 +507,7 @@ nav {
     height: 500px; }
     .container2 .forecast .foretitle {
       font-size: 22px;
-      margin-top: 25px;
-      color: white; }
+      margin-top: 25px; }
     .container2 .forecast .days {
       display: flex;
       align-items: center;
