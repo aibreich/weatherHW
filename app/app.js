@@ -369,6 +369,7 @@ function initListeners() {
 
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
+    alert("Please Refresh");
   }
   navigator.geolocation.getCurrentPosition(success, error, options);
 }
